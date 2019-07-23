@@ -2,10 +2,10 @@
 #include <FirebaseArduino.h>
 
 // Set these to run example.
-#define FIREBASE_HOST "amdocs-iot.firebaseio.com"
-#define FIREBASE_AUTH "ffnU3Hk7IfCQr7u05XGtPryzz8ELHGNZEvElkfg8"
-#define WIFI_SSID "free net"
-#define WIFI_PASSWORD "hello123"
+#define FIREBASE_HOST "amdocs-iot.firebaseio.com"  // firbase URL
+#define FIREBASE_AUTH "ffnU3Hk7IfCQr7u05XGtPryzz8ELHGNZEvElkfg8" // AUTH KEY
+#define WIFI_SSID "YourNetworkName" 
+#define WIFI_PASSWORD "Password"
 int relay1 = D2, relay2 = D3, relay3 = D4, relay4 = D5, pir = D6;//pins to be connected to relay modules from NodeMCU module(for now ignore PIR)
 String Relay1_value, Relay2_value, Relay3_value, Relay4_value;
 void setup() {

@@ -4,8 +4,8 @@
 // Set these to run example.
 #define FIREBASE_HOST "amdocs-iot.firebaseio.com"
 #define FIREBASE_AUTH "ffnU3Hk7IfCQr7u05XGtPryzz8ELHGNZEvElkfg8"
-#define WIFI_SSID "free net" //set the required ssid and password
-#define WIFI_PASSWORD "hello123"
+#define WIFI_SSID "YourNetworkName" //set the required ssid and password
+#define WIFI_PASSWORD "Password"
 int ldr1 = D2, ldr2 = D3, ldr3 = D4, ldr4 = D5; //pins to be connnected to the LDR modules from NOdeMCU
 int LDR1_value, LDR2_value, LDR3_value, LDR4_value;
 void setup() {

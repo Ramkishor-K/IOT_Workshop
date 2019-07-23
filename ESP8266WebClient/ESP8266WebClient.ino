@@ -2,8 +2,8 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
 
-#define WIFI_SSID "free net"
-#define WIFI_PASSPHRASE "hello123"
+#define WIFI_SSID "YourNetworkName"
+#define WIFI_PASSPHRASE "Passowrd"
 
 void setup() {
   Serial.begin(9600);
@@ -24,7 +24,7 @@ void setup() {
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
   Serial.println();
-  WiFi.printDiag(Serial);
+  //WiFi.printDiag(Serial);
   Serial.println();
 }
 

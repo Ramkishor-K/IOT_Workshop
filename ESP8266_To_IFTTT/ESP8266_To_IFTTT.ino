@@ -5,9 +5,10 @@
 #define SERIAL_DEBUG
 
 const char* myKey = "kxQAMSTTkoMnTTvHm5_aVh2KUdSiRqJrW38oazqcrWX"; // your maker key here
-const char* ssid = "free net"; // your router ssid here
-const char* password = "hello123"; // your router password here
-String projectName = "button_pressed";
+const char* ssid = "YouNetworkName"; // your router ssid here
+const char* password = "Password"; // your router password here
+
+String projectName = "*****";//project name here
 
 // declare new maker event with the name "ESP"
 DataToMaker event(myKey, projectName);
