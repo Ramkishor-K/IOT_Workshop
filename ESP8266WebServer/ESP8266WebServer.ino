@@ -1,16 +1,15 @@
 #include <ESP8266WiFi.h>
-
 const char* ssid = "YourNetworkName";
 const char* password = "Password";
 
 WiFiServer server(80);
 
-
+int ldr = 0; //Initializing the value to zero
 void setup()
 {
   Serial.begin(115200);
   Serial.println();
-
+  pinMode(D2,INPUT);
   Serial.printf("Connecting to %s ", ssid);
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED)
@@ -32,11 +31,11 @@ String prepareHtmlPage()
     String("HTTP/1.1 200 OK\r\n") +
     "Content-Type: text/html\r\n" +
     "Connection: close\r\n" +  // the connection will be closed after completion of the response
-    "Refresh: 5\r\n" +  // refresh the page automatically every 5 sec
+    "Refresh: 2\r\n" +  // refresh the page automatically every 5 sec
     "\r\n" +
     "<!DOCTYPE HTML>" +
     "<html>" +
-    "Analog input:  " + String("Input can be given here") +
+    "Analog input:  " + String(ldr) +
     "</html>" +
     "\r\n";
   return htmlPage;
@@ -49,6 +48,7 @@ void loop()
   // wait for a client (web browser) to connect
   if (client)
   {
+    ldr = digitalRead(D2);
     Serial.println("\n[Client connected]");
     while (client.connected())
     {
